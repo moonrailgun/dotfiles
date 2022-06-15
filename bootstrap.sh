@@ -13,7 +13,10 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+
+  if [ -f "~/.bash_profile" ]; then
+	  source ~/.bash_profile;
+  fi
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
